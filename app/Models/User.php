@@ -4,9 +4,9 @@ namespace App\Models;
 
 class User extends BaseModel
 {
-    protected $table = 'users'; // Define table name
+    protected $table = 'users';
     protected $primaryKey = 'id';
-    protected $fillable = ['user', 'password']; // Mass assignable attributes
+    protected $fillable = ['user', 'password'];
 
     // Find user by username
     public static function findByUsername($username)
