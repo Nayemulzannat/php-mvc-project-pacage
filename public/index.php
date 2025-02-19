@@ -3,21 +3,22 @@
 require_once __DIR__ . '/../config/config.php';
 require_once '../vendor/autoload.php';
 
+use Illuminate\Http\Request;
+use Illuminate\Routing\Router;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
 
+// Create a Router instance
+$events = new Dispatcher();
+$container = new Container();
+$router = new Router($events, $container);
 
-use App\Core\Router;
+// Load routes from routes/web.php
+require_once __DIR__ . '/../app/routes/web.php';
 
-$router = new Router();
+// Handle the request
+$request = Request::capture();
+$response = $router->dispatch($request);
 
-$router->add('', 'HomeController', 'index');
-$router->add('home', 'HomeController', 'index');
-$router->add('login', 'AuthController', 'login');
-$router->add('logout', 'AuthController', 'logout');
-$router->add('dashboard', 'DashboardController', 'dashboardController');
-$router->add('setting', 'SettingController', 'setting');
-
-## Dispatch the route
-$queryString = $_SERVER['REQUEST_URI'] ?? '';
-// var_dump($queryString);
-$path = parse_url($queryString, PHP_URL_PATH);
-$router->dispatch($path);
+// Send the response
+$response->send();
