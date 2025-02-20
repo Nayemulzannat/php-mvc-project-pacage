@@ -15,6 +15,6 @@ class HomeController extends Controller
             exit;
         }
 
-         $this->render('home', ['username' => $_SESSION['user']]);
+         $this->render('/home', ['username' => $_SESSION['user']]);
     }
 }

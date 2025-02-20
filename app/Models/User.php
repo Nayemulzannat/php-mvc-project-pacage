@@ -9,6 +9,7 @@ class User extends BaseModel
     protected $fillable = ['user', 'password'];
 
     // Find user by username
+    
     public static function findByUsername($username)
     {
         return self::where('user', $username)->first();

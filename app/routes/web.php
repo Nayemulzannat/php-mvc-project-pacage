@@ -11,7 +11,7 @@ use Illuminate\Routing\Router;
 ### Api routes
 $router->post('/login', [AuthController::class, 'login']);
 
-### Font view routes
+### Fornt view routes
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/login', [AuthController::class, 'showLogin']);
 $router->get('/logout', [AuthController::class, 'logout']);

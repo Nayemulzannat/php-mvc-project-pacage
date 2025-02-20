@@ -27,7 +27,7 @@ class AuthController extends Controller
                 exit;
             }
 
-            $this->render('login', ['error' => 'Invalid username or password.']);
+            $this->render('/login', ['error' => 'Invalid username or password.']);
         } else {
             header('HTTP/1.1 405 Method Not Allowed');
             echo "Method Not Allowed";

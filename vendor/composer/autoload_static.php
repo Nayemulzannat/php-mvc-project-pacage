@@ -62,6 +62,7 @@ class ComposerStaticInitaeb6709ca06428ea03aeba045c70b3c7
         ),
         'I' => 
         array (
+            'Illuminate\\View\\' => 16,
             'Illuminate\\Support\\' => 19,
             'Illuminate\\Session\\' => 19,
             'Illuminate\\Routing\\' => 19,
@@ -197,6 +198,10 @@ class ComposerStaticInitaeb6709ca06428ea03aeba045c70b3c7
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'Illuminate\\View\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/view',
         ),
         'Illuminate\\Support\\' => 
         array (
