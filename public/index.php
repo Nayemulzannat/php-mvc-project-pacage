@@ -1,7 +1,9 @@
 <?php
 
 require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/../config/blade.php';
 require_once '../vendor/autoload.php';
+
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Router;

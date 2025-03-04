@@ -15,6 +15,6 @@ class SettingController extends Controller
             exit;
         }
 
-        $this->render('setting', ['username' => $_SESSION['user']]);
+        $this->render('/pages.setting', ['username' => $_SESSION['user']]);
     }
 }

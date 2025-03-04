@@ -15,6 +15,6 @@ class DashboardController extends Controller
             exit;
         }
 
-        $this->render('dashboard', ['username' => $_SESSION['user']]);
+        $this->render('/pages.dashboard', ['username' => $_SESSION['user']]);
     }
 }

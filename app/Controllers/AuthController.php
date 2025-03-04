@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     public function showLogin(): void
     {
-        $this->render('login');
+        $this->render('pages.auth.login-page');
     }
 
     public function login(): void
@@ -27,7 +27,7 @@ class AuthController extends Controller
                 exit;
             }
 
-            $this->render('/login', ['error' => 'Invalid username or password.']);
+            $this->render('/pages.auth.login-page', ['error' => 'Invalid username or password.']);
         } else {
             header('HTTP/1.1 405 Method Not Allowed');
             echo "Method Not Allowed";
